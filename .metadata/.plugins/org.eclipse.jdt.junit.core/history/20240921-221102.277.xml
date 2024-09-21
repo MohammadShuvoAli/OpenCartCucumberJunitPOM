@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="OpenCart" tests="12" started="12" failures="0" errors="3" ignored="0">
+  <testsuite name="runner.TestRunner" time="81.062">
+    <testsuite name="Login Functionality" time="53.537">
+      <testcase name="Login with valid credentials #1" classname="Login Functionality" time="8.094"/>
+      <testcase name="Login with valid credentials #2" classname="Login Functionality" time="6.133"/>
+      <testcase name="Login with valid credentials #3" classname="Login Functionality" time="6.615"/>
+      <testcase name="Login with invalid credentials" classname="Login Functionality" time="9.006">
+        <error>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '4.17.0', revision: 'e52b1be057*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d273e7ccdc026a562a08735df0b536ca, getElementText [id]]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.59, chrome: {chromedriverVersion: 129.0.6668.58 (81a06fb873a9..., userDataDir: C:\Users\Shuvo\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:3754}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:3754/devtool..., se:cdpVersion: 129.0.6668.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (d273e7ccdc026a562a08735df0b536ca)] -&gt; xpath: //div[@class='alert alert-danger alert-dismissible']]
+Session ID: d273e7ccdc026a562a08735df0b536ca&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:546)&#13;
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)&#13;
+	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:191)&#13;
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)&#13;
+	at jdk.proxy2/jdk.proxy2.$Proxy21.getText(Unknown Source)&#13;
+	at utils.ElementUtils.getTextFromElement(ElementUtils.java:114)&#13;
+	at pages.LoginPage.getWarningMessageText(LoginPage.java:56)&#13;
+	at stepDefinitions.Login.user_should_get_a_proper_warning_message_about_credentials_mismatch(Login.java:80)&#13;
+	at ✽.User should get a proper warning message about credentials mismatch(file:///C:/Users/Shuvo/Desktop/OpenCartCucumberJunitPOM/OpenCart/src/test/resources/features/login.feature:22)&#13;
+Caused by: java.io.UncheckedIOException: java.net.ConnectException&#13;
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:442)&#13;
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)&#13;
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)&#13;
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:358)&#13;
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)&#13;
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)&#13;
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)&#13;
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)&#13;
+	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:191)&#13;
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)&#13;
+	at jdk.proxy2/jdk.proxy2.$Proxy21.getText(Unknown Source)&#13;
+	at utils.ElementUtils.getTextFromElement(ElementUtils.java:114)&#13;
+	at pages.LoginPage.getWarningMessageText(LoginPage.java:56)&#13;
+	at stepDefinitions.Login.user_should_get_a_proper_warning_message_about_credentials_mismatch(Login.java:80)&#13;
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)&#13;
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)&#13;
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)&#13;
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)&#13;
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)&#13;
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)&#13;
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)&#13;
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)&#13;
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)&#13;
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)&#13;
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)&#13;
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)&#13;
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)&#13;
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)&#13;
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)&#13;
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)&#13;
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)&#13;
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)&#13;
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)&#13;
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)&#13;
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)&#13;
+	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)&#13;
+	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)&#13;
+	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:530)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:758)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:453)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:211)&#13;
+Caused by: java.net.ConnectException&#13;
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1028)&#13;
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:227)&#13;
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:280)&#13;
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$2(PlainHttpConnection.java:238)&#13;
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)&#13;
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)&#13;
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)&#13;
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)&#13;
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)&#13;
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)&#13;
+	at java.base/java.lang.Thread.run(Thread.java:1583)&#13;
+Caused by: java.nio.channels.ClosedChannelException&#13;
+	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:202)&#13;
+	at java.base/sun.nio.ch.SocketChannelImpl.beginConnect(SocketChannelImpl.java:786)&#13;
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:874)&#13;
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:210)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)&#13;
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:212)&#13;
+	... 9 more&#13;
+&#13;
+org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '4.17.0', revision: 'e52b1be057*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d273e7ccdc026a562a08735df0b536ca, screenshot []]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.59, chrome: {chromedriverVersion: 129.0.6668.58 (81a06fb873a9..., userDataDir: C:\Users\Shuvo\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:3754}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:3754/devtool..., se:cdpVersion: 129.0.6668.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d273e7ccdc026a562a08735df0b536ca&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:546)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:592)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:322)&#13;
+	at hooks.ProjectHooks.tearDown(ProjectHooks.java:36)&#13;
+Caused by: java.io.UncheckedIOException: java.net.ConnectException&#13;
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:442)&#13;
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)&#13;
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)&#13;
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:358)&#13;
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)&#13;
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)&#13;
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:592)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:322)&#13;
+	at hooks.ProjectHooks.tearDown(ProjectHooks.java:36)&#13;
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)&#13;
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)&#13;
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)&#13;
+	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)&#13;
+	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)&#13;
+	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)&#13;
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)&#13;
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)&#13;
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)&#13;
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:90)&#13;
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)&#13;
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)&#13;
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)&#13;
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)&#13;
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)&#13;
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)&#13;
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)&#13;
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)&#13;
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)&#13;
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)&#13;
+	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)&#13;
+	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)&#13;
+	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:530)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:758)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:453)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:211)&#13;
+Caused by: java.net.ConnectException&#13;
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1028)&#13;
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:227)&#13;
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:280)&#13;
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$2(PlainHttpConnection.java:238)&#13;
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)&#13;
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)&#13;
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)&#13;
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)&#13;
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)&#13;
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)&#13;
+	at java.base/java.lang.Thread.run(Thread.java:1583)&#13;
+Caused by: java.nio.channels.ClosedChannelException&#13;
+	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:202)&#13;
+	at java.base/sun.nio.ch.SocketChannelImpl.beginConnect(SocketChannelImpl.java:786)&#13;
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:874)&#13;
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:210)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)&#13;
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:212)&#13;
+	... 9 more&#13;
+&#13;
+</error>
+      </testcase>
+      <testcase name="Login with valid email and invalid password" classname="Login Functionality" time="6.646"/>
+      <testcase name="Login with invalid email and invalid password" classname="Login Functionality" time="6.639"/>
+      <testcase name="Login without providing any credentials" classname="Login Functionality" time="5.191"/>
+      <testcase name="User logs in with registered credentials" classname="Login Functionality" time="5.208">
+        <error>java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence&#13;
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)&#13;
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)&#13;
+	at jdk.proxy2/jdk.proxy2.$Proxy21.sendKeys(Unknown Source)&#13;
+	at utils.ElementUtils.typeTextIntoElement(ElementUtils.java:33)&#13;
+	at pages.LoginPage.enterPassword(LoginPage.java:44)&#13;
+	at stepDefinitions.Login.user_enters_registered_email_address_and_password(Login.java:104)&#13;
+	at ✽.User enters registered email address and password(file:///C:/Users/Shuvo/Desktop/OpenCartCucumberJunitPOM/OpenCart/src/test/resources/features/login.feature:47)&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="Registration functionality" time="27.515">
+      <testcase name="User creates an account only with mandatory fields" classname="Registration functionality" time="7.853"/>
+      <testcase name="User creates an account with all fields" classname="Registration functionality" time="7.301"/>
+      <testcase name="User creates a duplicate account" classname="Registration functionality" time="7.267"/>
+      <testcase name="User creates an account without filling any details" classname="Registration functionality" time="5.093"/>
+    </testsuite>
+  </testsuite>
+</testrun>

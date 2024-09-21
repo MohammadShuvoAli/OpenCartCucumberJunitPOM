@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="OpenCart" tests="12" started="12" failures="0" errors="3" ignored="0">
+  <testsuite name="runner.TestRunner" time="71.622">
+    <testsuite name="Login Functionality" time="46.495">
+      <testcase name="Login with valid credentials #1" classname="Login Functionality" time="7.094"/>
+      <testcase name="Login with valid credentials #2" classname="Login Functionality" time="5.937"/>
+      <testcase name="Login with valid credentials #3" classname="Login Functionality" time="5.599"/>
+      <testcase name="Login with invalid credentials" classname="Login Functionality" time="5.741"/>
+      <testcase name="Login with valid email and invalid password" classname="Login Functionality" time="5.658"/>
+      <testcase name="Login with invalid email and invalid password" classname="Login Functionality" time="5.703"/>
+      <testcase name="Login without providing any credentials" classname="Login Functionality" time="5.607"/>
+      <testcase name="User logs in with registered credentials" classname="Login Functionality" time="5.154">
+        <error>java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence&#13;
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)&#13;
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)&#13;
+	at jdk.proxy2/jdk.proxy2.$Proxy21.sendKeys(Unknown Source)&#13;
+	at utils.ElementUtils.typeTextIntoElement(ElementUtils.java:33)&#13;
+	at pages.LoginPage.enterPassword(LoginPage.java:44)&#13;
+	at stepDefinitions.Login.user_enters_registered_email_address_and_password(Login.java:104)&#13;
+	at ✽.User enters registered email address and password(file:///C:/Users/Shuvo/Desktop/OpenCartCucumberJunitPOM/OpenCart/src/test/resources/features/Login.feature:46)&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="Registration functionality" time="25.115">
+      <testcase name="User creates an account only with mandatory fields" classname="Registration functionality" time="5.939">
+        <error>java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence&#13;
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)&#13;
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)&#13;
+	at jdk.proxy2/jdk.proxy2.$Proxy21.sendKeys(Unknown Source)&#13;
+	at utils.ElementUtils.typeTextIntoElement(ElementUtils.java:33)&#13;
+	at pages.RegisterPage.enterPassword(RegisterPage.java:95)&#13;
+	at stepDefinitions.Register.user_enters_the_details_into_below_fields(Register.java:48)&#13;
+	at ✽.User enters the details into below fields(file:///C:/Users/Shuvo/Desktop/OpenCartCucumberJunitPOM/OpenCart/src/test/resources/features/Register.feature:5)&#13;
+&#13;
+</error>
+      </testcase>
+      <testcase name="User creates an account with all fields" classname="Registration functionality" time="7.2">
+        <error>java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence&#13;
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)&#13;
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)&#13;
+	at jdk.proxy2/jdk.proxy2.$Proxy21.sendKeys(Unknown Source)&#13;
+	at utils.ElementUtils.typeTextIntoElement(ElementUtils.java:33)&#13;
+	at pages.RegisterPage.enterPassword(RegisterPage.java:95)&#13;
+	at stepDefinitions.Register.user_enters_the_details_into_below_fields(Register.java:48)&#13;
+	at ✽.User enters the details into below fields(file:///C:/Users/Shuvo/Desktop/OpenCartCucumberJunitPOM/OpenCart/src/test/resources/features/Register.feature:16)&#13;
+&#13;
+</error>
+      </testcase>
+      <testcase name="User creates a duplicate account" classname="Registration functionality" time="7.01"/>
+      <testcase name="User creates an account without filling any details" classname="Registration functionality" time="4.965"/>
+    </testsuite>
+  </testsuite>
+</testrun>

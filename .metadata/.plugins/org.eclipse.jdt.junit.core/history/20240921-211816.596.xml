@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="OpenCart" tests="4" started="4" failures="0" errors="8" ignored="0">
+  <testsuite name="runner.TestRunner" time="0.554">
+    <testsuite name="Registration functionality" time="0.554">
+      <testcase name="User creates an account only with mandatory fields" classname="Registration functionality" time="0.337">
+        <error>java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.click()" because "webElement" is null&#13;
+	at utils.ElementUtils.clickOnElement(ElementUtils.java:24)&#13;
+	at pages.HomePage.clickOnMyAccount(HomePage.java:47)&#13;
+	at stepDefinitions.Register.user_navigates_to_register_account_page(Register.java:29)&#13;
+	at ✽.User navigates to Register Account page(file:///C:/Users/Shuvo/Desktop/OpenCartCucumberJunitPOM/OpenCart/src/test/resources/features/Register.feature:6)&#13;
+&#13;
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "this.driver" is null&#13;
+	at hooks.ProjectHooks.tearDown(ProjectHooks.java:36)&#13;
+&#13;
+</error>
+      </testcase>
+      <testcase name="User creates an account with all fields" classname="Registration functionality" time="0.086">
+        <error>java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.click()" because "webElement" is null&#13;
+	at utils.ElementUtils.clickOnElement(ElementUtils.java:24)&#13;
+	at pages.HomePage.clickOnMyAccount(HomePage.java:47)&#13;
+	at stepDefinitions.Register.user_navigates_to_register_account_page(Register.java:29)&#13;
+	at ✽.User navigates to Register Account page(file:///C:/Users/Shuvo/Desktop/OpenCartCucumberJunitPOM/OpenCart/src/test/resources/features/Register.feature:17)&#13;
+&#13;
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "this.driver" is null&#13;
+	at hooks.ProjectHooks.tearDown(ProjectHooks.java:36)&#13;
+&#13;
+</error>
+      </testcase>
+      <testcase name="User creates a duplicate account" classname="Registration functionality" time="0.057">
+        <error>java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.click()" because "webElement" is null&#13;
+	at utils.ElementUtils.clickOnElement(ElementUtils.java:24)&#13;
+	at pages.HomePage.clickOnMyAccount(HomePage.java:47)&#13;
+	at stepDefinitions.Register.user_navigates_to_register_account_page(Register.java:29)&#13;
+	at ✽.User navigates to Register Account page(file:///C:/Users/Shuvo/Desktop/OpenCartCucumberJunitPOM/OpenCart/src/test/resources/features/Register.feature:29)&#13;
+&#13;
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "this.driver" is null&#13;
+	at hooks.ProjectHooks.tearDown(ProjectHooks.java:36)&#13;
+&#13;
+</error>
+      </testcase>
+      <testcase name="User creates an account without filling any details" classname="Registration functionality" time="0.064">
+        <error>java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.click()" because "webElement" is null&#13;
+	at utils.ElementUtils.clickOnElement(ElementUtils.java:24)&#13;
+	at pages.HomePage.clickOnMyAccount(HomePage.java:47)&#13;
+	at stepDefinitions.Register.user_navigates_to_register_account_page(Register.java:29)&#13;
+	at ✽.User navigates to Register Account page(file:///C:/Users/Shuvo/Desktop/OpenCartCucumberJunitPOM/OpenCart/src/test/resources/features/Register.feature:42)&#13;
+&#13;
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "this.driver" is null&#13;
+	at hooks.ProjectHooks.tearDown(ProjectHooks.java:36)&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

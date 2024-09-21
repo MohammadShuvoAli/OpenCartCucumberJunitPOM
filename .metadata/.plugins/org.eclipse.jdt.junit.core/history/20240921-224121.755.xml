@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="OpenCart" tests="13" started="13" failures="0" errors="0" ignored="0">
+  <testsuite name="runner.TestRunner" time="81.462">
+    <testsuite name="Registration functionality" time="36.693">
+      <testcase name="User creates an account only with mandatory fields" classname="Registration functionality" time="9.355"/>
+      <testcase name="User creates an account with all fields" classname="Registration functionality" time="7.705"/>
+      <testcase name="User creates a duplicate account" classname="Registration functionality" time="7.505"/>
+      <testcase name="User creates an account without filling any details" classname="Registration functionality" time="4.945"/>
+      <testcase name="User creates new account with provided credentials" classname="Registration functionality" time="7.182"/>
+    </testsuite>
+    <testsuite name="Login Functionality" time="44.755">
+      <testcase name="Login with valid credentials #1" classname="Login Functionality" time="5.445"/>
+      <testcase name="Login with valid credentials #2" classname="Login Functionality" time="5.549"/>
+      <testcase name="Login with valid credentials #3" classname="Login Functionality" time="5.865"/>
+      <testcase name="Login with invalid credentials" classname="Login Functionality" time="5.521"/>
+      <testcase name="Login with valid email and invalid password" classname="Login Functionality" time="5.505"/>
+      <testcase name="Login with invalid email and invalid password" classname="Login Functionality" time="5.671"/>
+      <testcase name="Login without providing any credentials" classname="Login Functionality" time="5.611"/>
+      <testcase name="User logs in with registered credentials" classname="Login Functionality" time="5.588"/>
+    </testsuite>
+  </testsuite>
+</testrun>

@@ -1,0 +1,50 @@
+package utils;
+
+import java.util.Date;
+import java.util.Random;
+
+public class CommonUtils {
+
+    public static final int IMPLICIT_WAIT_TIME = 10;
+    public static final int PAGE_LOAD_TIME = 10;
+    public static final int EXPLICIT_WAIT_BASIC_TIME = 10;
+
+    private static String generatedEmail;
+    private static String generatedPassword;
+
+    // Generate a random email
+    public static String randomEmailGenerator() {
+        Date date = new Date();
+        generatedEmail = "shuvo" + date.toString().replace(" ", "_").replace(":", "_") + "@gmail.com";
+        return generatedEmail;
+    }
+
+    // Generate a random password
+    public static String randomPasswordGenerator(int length) {
+        String upperCaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String lowerCaseLetters = "abcdefghijklmnopqrstuvwxyz";
+        String numbers = "0123456789";
+        String specialCharacters = "!@#$%^&*()-_=+";
+        
+        String combinedChars = upperCaseLetters + lowerCaseLetters + numbers + specialCharacters;
+        Random random = new Random();
+        
+        StringBuilder password = new StringBuilder(length);
+        for (int i = 0; i < length; i++) {
+            int index = random.nextInt(combinedChars.length());
+            password.append(combinedChars.charAt(index));
+        }
+
+        generatedPassword = password.toString();
+        return generatedPassword;
+    }
+
+    // Getters for the generated email and password
+    public static String getGeneratedEmail() {
+        return generatedEmail;
+    }
+
+    public static String getGeneratedPassword() {
+        return generatedPassword;
+    }
+}

@@ -1,0 +1,64 @@
+package stepDefinitions;
+
+import java.util.Map;
+
+import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
+import factory.DriverFactory;
+import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import pages.AccountSuccessPage;
+import pages.HomePage;
+import pages.RegisterPage;
+import utils.CommonUtils;
+
+public class Register {
+
+	WebDriver driver;
+	private RegisterPage registerPage;
+
+	@Given("User navigates to Register Account page")
+	public void user_navigates_to_register_account_page() {
+		driver = DriverFactory.getDriver();
+		HomePage homepage = new HomePage(driver);
+		homepage.clickOnMyAccount();
+		homepage.selectRegisterOption();
+	}
+
+	@When("User enters the details into below fields")
+	public void user_enters_the_details_into_below_fields(DataTable dataTable) {
+		Map<String, String> dataMap = dataTable.asMap(String.class, String.class);
+
+		registerPage = new RegisterPage(driver);
+
+		// Generate a random email and store it
+		String email = CommonUtils.randomEmailGenerator();
+		CommonUtils.setRegisteredEmail(email);
+		CommonUtils.setRegisteredPassword(dataMap.get("password"));
+
+		registerPage.enterFirstName(dataMap.get("firstName"));
+		registerPage.enterLastName(dataMap.get("lastName"));
+		registerPage.enterEmailAddress(email);
+		registerPage.enterTelephoneNumber(dataMap.get("telephone"));
+		registerPage.enterPassword(dataMap.get("password"));
+		registerPage.enterConfirmPassword(dataMap.get("password"));
+	}
+
+	@When("User selects Privacy Policy")
+	public void user_selects_privacy_policy() {
+		registerPage.selectPrivacyPolicy();
+	}
+
+	@When("User clicks on Continue button")
+	public void user_clicks_on_continue_button() {
+		registerPage.clickOnContinueButton();
+	}
+
+	@Then("User account should get created successfully")
+	public void user_account_should_get_created_successfully() {
+		AccountSuccessPage accountSuccessPage = new AccountSuccessPage(driver);
+		Assert.assertEquals("Your Account Has Been Created!", accountSuccessPage.getPageHeading());
+	}
+}

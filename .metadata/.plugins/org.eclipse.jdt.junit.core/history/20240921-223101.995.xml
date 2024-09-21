@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="OpenCart" tests="12" started="12" failures="2" errors="0" ignored="0">
+  <testsuite name="runner.TestRunner" time="76.956">
+    <testsuite name="Registration functionality" time="28.948">
+      <testcase name="User creates an account only with mandatory fields" classname="Registration functionality" time="8.724"/>
+      <testcase name="User creates an account with all fields" classname="Registration functionality" time="7.487">
+        <failure>
+          <expected>Your Account Has Been Created!</expected>
+          <actual>Register Account</actual>
+          org.junit.ComparisonFailure: expected:&lt;[Your Account Has Been Created!]&gt; but was:&lt;[Register Account]&gt;&#13;
+	at org.junit.Assert.assertEquals(Assert.java:115)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at stepDefinitions.Register.user_account_should_get_created_successfully(Register.java:81)&#13;
+	at ✽.User account should get created successfully(file:///C:/Users/Shuvo/Desktop/OpenCartCucumberJunitPOM/OpenCart/src/test/resources/features/Register.feature:26)&#13;
+&#13;
+
+        </failure>
+      </testcase>
+      <testcase name="User creates a duplicate account" classname="Registration functionality" time="6.532"/>
+      <testcase name="User creates an account without filling any details" classname="Registration functionality" time="6.204"/>
+    </testsuite>
+    <testsuite name="Login Functionality" time="48.0">
+      <testcase name="Login with valid credentials #1" classname="Login Functionality" time="6.228"/>
+      <testcase name="Login with valid credentials #2" classname="Login Functionality" time="6.455"/>
+      <testcase name="Login with valid credentials #3" classname="Login Functionality" time="5.794">
+        <failure>java.lang.AssertionError: Login failed. Expected title: My Account, Actual title: Account Login&#13;
+	at org.junit.Assert.fail(Assert.java:88)&#13;
+	at stepDefinitions.Login.user_should_get_successfully_logged_in(Login.java:65)&#13;
+	at ✽.User should get successfully logged in(file:///C:/Users/Shuvo/Desktop/OpenCartCucumberJunitPOM/OpenCart/src/test/resources/features/UserLogin.feature:9)&#13;
+&#13;
+</failure>
+      </testcase>
+      <testcase name="Login with invalid credentials" classname="Login Functionality" time="5.647"/>
+      <testcase name="Login with valid email and invalid password" classname="Login Functionality" time="6.398"/>
+      <testcase name="Login with invalid email and invalid password" classname="Login Functionality" time="6.173"/>
+      <testcase name="Login without providing any credentials" classname="Login Functionality" time="5.792"/>
+      <testcase name="User logs in with registered credentials" classname="Login Functionality" time="5.511"/>
+    </testsuite>
+  </testsuite>
+</testrun>

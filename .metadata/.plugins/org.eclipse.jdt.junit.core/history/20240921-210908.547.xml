@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="OpenCart" tests="12" started="12" failures="0" errors="1" ignored="0">
+  <testsuite name="runner.TestRunner" time="76.318">
+    <testsuite name="Login Functionality" time="47.971">
+      <testcase name="Login with valid credentials #1" classname="Login Functionality" time="7.744"/>
+      <testcase name="Login with valid credentials #2" classname="Login Functionality" time="5.626"/>
+      <testcase name="Login with valid credentials #3" classname="Login Functionality" time="5.88"/>
+      <testcase name="User logs in with registered credentials" classname="Login Functionality" time="4.678">
+        <error>java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence&#13;
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)&#13;
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)&#13;
+	at jdk.proxy2/jdk.proxy2.$Proxy21.sendKeys(Unknown Source)&#13;
+	at utils.ElementUtils.typeTextIntoElement(ElementUtils.java:33)&#13;
+	at pages.LoginPage.enterEmailAddress(LoginPage.java:38)&#13;
+	at stepDefinitions.Login.user_enters_registered_email_address_and_password(Login.java:103)&#13;
+	at ✽.User enters registered email address and password(file:///C:/Users/Shuvo/Desktop/OpenCartCucumberJunitPOM/OpenCart/src/test/resources/features/Login.feature:18)&#13;
+&#13;
+</error>
+      </testcase>
+      <testcase name="Login with invalid credentials" classname="Login Functionality" time="6.018"/>
+      <testcase name="Login with valid email and invalid password" classname="Login Functionality" time="5.361"/>
+      <testcase name="Login with invalid email and invalid password" classname="Login Functionality" time="5.86"/>
+      <testcase name="Login without providing any credentials" classname="Login Functionality" time="6.803"/>
+    </testsuite>
+    <testsuite name="Registration functionality" time="28.339">
+      <testcase name="User creates an account only with mandatory fields" classname="Registration functionality" time="9.028"/>
+      <testcase name="User creates an account with all fields" classname="Registration functionality" time="7.369"/>
+      <testcase name="User creates a duplicate account" classname="Registration functionality" time="6.75"/>
+      <testcase name="User creates an account without filling any details" classname="Registration functionality" time="5.192"/>
+    </testsuite>
+  </testsuite>
+</testrun>

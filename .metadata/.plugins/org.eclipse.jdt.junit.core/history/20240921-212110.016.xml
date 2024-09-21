@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="OpenCart" tests="4" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="runner.TestRunner" time="31.171">
+    <testsuite name="Registration functionality" time="31.171">
+      <testcase name="User creates an account only with mandatory fields" classname="Registration functionality" time="9.079"/>
+      <testcase name="User creates an account with all fields" classname="Registration functionality" time="8.454"/>
+      <testcase name="User creates a duplicate account" classname="Registration functionality" time="8.585"/>
+      <testcase name="User creates an account without filling any details" classname="Registration functionality" time="5.053"/>
+    </testsuite>
+  </testsuite>
+</testrun>

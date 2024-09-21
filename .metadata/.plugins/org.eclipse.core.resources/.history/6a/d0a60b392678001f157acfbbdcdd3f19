@@ -1,0 +1,50 @@
+package stepDefinitions;
+
+import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
+import factory.DriverFactory;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import pages.HomePage;
+import pages.LoginPage;
+import utils.CommonUtils;
+
+public class Login {
+
+	WebDriver driver;
+	private LoginPage loginPage;
+
+	@Given("User has navigated to login page")
+	public void user_has_navigated_to_login_page() {
+		driver = DriverFactory.getDriver();
+		HomePage homepage = new HomePage(driver);
+		homepage.clickOnMyAccount();
+		homepage.selectLoginOption();
+	}
+
+	@When("User enters registered email address and password")
+	public void user_enters_registered_email_address_and_password() {
+		loginPage = new LoginPage(driver);
+		// Use stored email and password from the registration process
+		loginPage.enterEmailAddress(CommonUtils.getRegisteredEmail());
+		loginPage.enterPassword(CommonUtils.getRegisteredPassword());
+	}
+
+	@When("User clicks on Login button")
+	public void user_clicks_on_login_button() {
+		loginPage.clickOnLoginButton();
+	}
+
+	@Then("User should get successfully logged in")
+	public void user_should_get_successfully_logged_in() {
+		String expectedTitle = "My Account";
+		String actualTitle = driver.getTitle();
+
+		if (expectedTitle.equals(actualTitle)) {
+			Assert.assertTrue(true);
+		} else {
+			Assert.fail("Login failed. Expected title: " + expectedTitle + ", Actual title: " + actualTitle);
+		}
+	}
+}

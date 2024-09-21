@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="OpenCart" tests="12" started="12" failures="1" errors="0" ignored="0">
+  <testsuite name="runner.TestRunner" time="75.346">
+    <testsuite name="Login Functionality" time="47.36">
+      <testcase name="Login with valid credentials #1" classname="Login Functionality" time="7.969"/>
+      <testcase name="Login with valid credentials #2" classname="Login Functionality" time="5.452"/>
+      <testcase name="Login with valid credentials #3" classname="Login Functionality" time="5.454"/>
+      <testcase name="Login with invalid credentials" classname="Login Functionality" time="5.779"/>
+      <testcase name="Login with valid email and invalid password" classname="Login Functionality" time="5.333"/>
+      <testcase name="Login with invalid email and invalid password" classname="Login Functionality" time="6.085"/>
+      <testcase name="Login without providing any credentials" classname="Login Functionality" time="5.42"/>
+      <testcase name="User logs in with registered credentials" classname="Login Functionality" time="5.867">
+        <failure>java.lang.AssertionError: Login failed. Expected title: My Account, Actual title: Account Login&#13;
+	at org.junit.Assert.fail(Assert.java:88)&#13;
+	at stepDefinitions.Login.user_should_get_successfully_logged_in(Login.java:65)&#13;
+	at ✽.User should get successfully logged in(file:///C:/Users/Shuvo/Desktop/OpenCartCucumberJunitPOM/OpenCart/src/test/resources/features/Login.feature:48)&#13;
+&#13;
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="Registration functionality" time="27.975">
+      <testcase name="User creates an account only with mandatory fields" classname="Registration functionality" time="7.615"/>
+      <testcase name="User creates an account with all fields" classname="Registration functionality" time="7.198"/>
+      <testcase name="User creates a duplicate account" classname="Registration functionality" time="7.995"/>
+      <testcase name="User creates an account without filling any details" classname="Registration functionality" time="5.167"/>
+    </testsuite>
+  </testsuite>
+</testrun>

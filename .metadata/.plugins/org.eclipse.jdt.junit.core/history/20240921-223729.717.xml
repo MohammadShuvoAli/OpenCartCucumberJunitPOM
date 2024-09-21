@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="OpenCart" tests="13" started="13" failures="1" errors="0" ignored="0">
+  <testsuite name="runner.TestRunner" time="79.013">
+    <testsuite name="Registration functionality" time="35.276">
+      <testcase name="User creates an account only with mandatory fields" classname="Registration functionality" time="8.638"/>
+      <testcase name="User creates an account with all fields" classname="Registration functionality" time="7.276"/>
+      <testcase name="User creates a duplicate account" classname="Registration functionality" time="6.87"/>
+      <testcase name="User creates an account without filling any details" classname="Registration functionality" time="5.14"/>
+      <testcase name="User creates new account with provided credentials" classname="Registration functionality" time="7.35">
+        <failure>
+          <expected>Your Account Has Been Created!</expected>
+          <actual>Register Account</actual>
+          org.junit.ComparisonFailure: expected:&lt;[Your Account Has Been Created!]&gt; but was:&lt;[Register Account]&gt;&#13;
+	at org.junit.Assert.assertEquals(Assert.java:115)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at stepDefinitions.Register.user_account_should_get_created_successfully(Register.java:95)&#13;
+	at ✽.User account should get created successfully(file:///C:/Users/Shuvo/Desktop/OpenCartCucumberJunitPOM/OpenCart/src/test/resources/features/Register.feature:54)&#13;
+&#13;
+
+        </failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="Login Functionality" time="43.726">
+      <testcase name="Login with valid credentials #1" classname="Login Functionality" time="5.64"/>
+      <testcase name="Login with valid credentials #2" classname="Login Functionality" time="5.491"/>
+      <testcase name="Login with valid credentials #3" classname="Login Functionality" time="5.345"/>
+      <testcase name="Login with invalid credentials" classname="Login Functionality" time="5.397"/>
+      <testcase name="Login with valid email and invalid password" classname="Login Functionality" time="5.766"/>
+      <testcase name="Login with invalid email and invalid password" classname="Login Functionality" time="5.266"/>
+      <testcase name="Login without providing any credentials" classname="Login Functionality" time="5.415"/>
+      <testcase name="User logs in with registered credentials" classname="Login Functionality" time="5.405"/>
+    </testsuite>
+  </testsuite>
+</testrun>

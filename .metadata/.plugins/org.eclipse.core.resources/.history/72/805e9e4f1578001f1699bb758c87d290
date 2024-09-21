@@ -1,0 +1,11 @@
+Feature: Add to Cart and Checkout Process
+
+  Scenario: User adds an item to the cart and completes the checkout process
+    Given the user is on the home page
+    When the user adds an item to the cart
+    And the user proceeds to checkout
+    And the user fills in their billing details
+      | firstName | lastName | address        | city      |
+      | John      | Doe      | 123 Main Street| New York  |
+    And the user confirms the order
+    Then the order should be successfully placed

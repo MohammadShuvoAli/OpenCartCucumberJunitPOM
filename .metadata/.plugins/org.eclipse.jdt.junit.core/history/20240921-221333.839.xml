@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="OpenCart" tests="12" started="12" failures="1" errors="0" ignored="0">
+  <testsuite name="runner.TestRunner" time="72.079">
+    <testsuite name="Registration functionality" time="28.675">
+      <testcase name="User creates an account only with mandatory fields" classname="Registration functionality" time="8.778"/>
+      <testcase name="User creates an account with all fields" classname="Registration functionality" time="7.431"/>
+      <testcase name="User creates a duplicate account" classname="Registration functionality" time="7.149"/>
+      <testcase name="User creates an account without filling any details" classname="Registration functionality" time="5.316"/>
+    </testsuite>
+    <testsuite name="Login Functionality" time="43.392">
+      <testcase name="Login with valid credentials #1" classname="Login Functionality" time="5.507"/>
+      <testcase name="Login with valid credentials #2" classname="Login Functionality" time="5.503"/>
+      <testcase name="Login with valid credentials #3" classname="Login Functionality" time="5.364"/>
+      <testcase name="Login with invalid credentials" classname="Login Functionality" time="5.625"/>
+      <testcase name="Login with valid email and invalid password" classname="Login Functionality" time="5.443"/>
+      <testcase name="Login with invalid email and invalid password" classname="Login Functionality" time="5.195"/>
+      <testcase name="Login without providing any credentials" classname="Login Functionality" time="5.179"/>
+      <testcase name="User logs in with registered credentials" classname="Login Functionality" time="5.574">
+        <failure>java.lang.AssertionError: Login failed. Expected title: My Account, Actual title: Account Login&#13;
+	at org.junit.Assert.fail(Assert.java:88)&#13;
+	at stepDefinitions.Login.user_should_get_successfully_logged_in(Login.java:65)&#13;
+	at ✽.User should get successfully logged in(file:///C:/Users/Shuvo/Desktop/OpenCartCucumberJunitPOM/OpenCart/src/test/resources/features/UserLogin.feature:49)&#13;
+&#13;
+</failure>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

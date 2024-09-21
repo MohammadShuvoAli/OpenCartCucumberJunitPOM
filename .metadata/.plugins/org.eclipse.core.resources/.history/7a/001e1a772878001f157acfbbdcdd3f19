@@ -1,0 +1,37 @@
+package utils;
+
+import java.util.Date;
+
+public class CommonUtils {
+
+    public static final int IMPLICIT_WAIT_TIME = 10;
+    public static final int PAGE_LOAD_TIME = 10;
+    public static final int EXPLICIT_WAIT_BASIC_TIME = 10;
+
+    private static String registeredEmail;
+    private static String registeredPassword;
+
+    // Method to generate a random email
+    public static String randomEmailGenerator() {
+        Date date = new Date();
+        String randomEmail = "shuvo" + date.toString().replace(" ", "_").replace(":", "_") + "@gmail.com";
+        return randomEmail;
+    }
+
+    // Getters and setters for the registered email and password
+    public static String getRegisteredEmail() {
+        return registeredEmail;
+    }
+
+    public static void setRegisteredEmail(String email) {
+        registeredEmail = email;
+    }
+
+    public static String getRegisteredPassword() {
+        return registeredPassword;
+    }
+
+    public static void setRegisteredPassword(String password) {
+        registeredPassword = password;
+    }
+}

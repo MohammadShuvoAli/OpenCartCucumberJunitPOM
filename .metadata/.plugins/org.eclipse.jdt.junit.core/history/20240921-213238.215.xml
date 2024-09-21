@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="OpenCart" tests="12" started="12" failures="0" errors="16" ignored="0">
+  <testsuite name="runner.TestRunner" time="32.409">
+    <testsuite name="Login Functionality" time="32.117">
+      <testcase name="Login with valid credentials #1" classname="Login Functionality" time="5.839">
+        <error>io.cucumber.junit.UndefinedStepException: The step 'User creates an account' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given("User creates an account")
+public void user_creates_an_account() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+&#13;
+&#13;
+</error>
+      </testcase>
+      <testcase name="Login with valid credentials #2" classname="Login Functionality" time="3.571">
+        <error>io.cucumber.junit.UndefinedStepException: The step 'User creates an account' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given("User creates an account")
+public void user_creates_an_account() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+&#13;
+&#13;
+</error>
+      </testcase>
+      <testcase name="Login with valid credentials #3" classname="Login Functionality" time="4.1">
+        <error>io.cucumber.junit.UndefinedStepException: The step 'User creates an account' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given("User creates an account")
+public void user_creates_an_account() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+&#13;
+&#13;
+</error>
+      </testcase>
+      <testcase name="User logs in with registered credentials" classname="Login Functionality" time="2.769">
+        <error>io.cucumber.junit.UndefinedStepException: The step 'User creates an account' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given("User creates an account")
+public void user_creates_an_account() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+&#13;
+&#13;
+</error>
+      </testcase>
+      <testcase name="Login with invalid credentials" classname="Login Functionality" time="5.355">
+        <error>io.cucumber.junit.UndefinedStepException: The step 'User creates an account' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given("User creates an account")
+public void user_creates_an_account() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+&#13;
+&#13;
+</error>
+      </testcase>
+      <testcase name="Login with valid email and invalid password" classname="Login Functionality" time="3.551">
+        <error>io.cucumber.junit.UndefinedStepException: The step 'User creates an account' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given("User creates an account")
+public void user_creates_an_account() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+&#13;
+&#13;
+</error>
+      </testcase>
+      <testcase name="Login with invalid email and invalid password" classname="Login Functionality" time="3.399">
+        <error>io.cucumber.junit.UndefinedStepException: The step 'User creates an account' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given("User creates an account")
+public void user_creates_an_account() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+&#13;
+&#13;
+</error>
+      </testcase>
+      <testcase name="Login without providing any credentials" classname="Login Functionality" time="3.528">
+        <error>io.cucumber.junit.UndefinedStepException: The step 'User creates an account' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given("User creates an account")
+public void user_creates_an_account() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="Registration functionality" time="0.278">
+      <testcase name="User creates an account only with mandatory fields" classname="Registration functionality" time="0.137">
+        <error>java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.click()" because "webElement" is null&#13;
+	at utils.ElementUtils.clickOnElement(ElementUtils.java:24)&#13;
+	at pages.HomePage.clickOnMyAccount(HomePage.java:42)&#13;
+	at stepDefinitions.Register.user_navigates_to_register_account_page(Register.java:29)&#13;
+	at ✽.User navigates to Register Account page(file:///C:/Users/Shuvo/Desktop/OpenCartCucumberJunitPOM/OpenCart/src/test/resources/features/Register.feature:6)&#13;
+&#13;
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "this.driver" is null&#13;
+	at hooks.ProjectHooks.tearDown(ProjectHooks.java:36)&#13;
+&#13;
+</error>
+      </testcase>
+      <testcase name="User creates an account with all fields" classname="Registration functionality" time="0.059">
+        <error>java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.click()" because "webElement" is null&#13;
+	at utils.ElementUtils.clickOnElement(ElementUtils.java:24)&#13;
+	at pages.HomePage.clickOnMyAccount(HomePage.java:42)&#13;
+	at stepDefinitions.Register.user_navigates_to_register_account_page(Register.java:29)&#13;
+	at ✽.User navigates to Register Account page(file:///C:/Users/Shuvo/Desktop/OpenCartCucumberJunitPOM/OpenCart/src/test/resources/features/Register.feature:17)&#13;
+&#13;
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "this.driver" is null&#13;
+	at hooks.ProjectHooks.tearDown(ProjectHooks.java:36)&#13;
+&#13;
+</error>
+      </testcase>
+      <testcase name="User creates a duplicate account" classname="Registration functionality" time="0.045">
+        <error>java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.click()" because "webElement" is null&#13;
+	at utils.ElementUtils.clickOnElement(ElementUtils.java:24)&#13;
+	at pages.HomePage.clickOnMyAccount(HomePage.java:42)&#13;
+	at stepDefinitions.Register.user_navigates_to_register_account_page(Register.java:29)&#13;
+	at ✽.User navigates to Register Account page(file:///C:/Users/Shuvo/Desktop/OpenCartCucumberJunitPOM/OpenCart/src/test/resources/features/Register.feature:29)&#13;
+&#13;
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "this.driver" is null&#13;
+	at hooks.ProjectHooks.tearDown(ProjectHooks.java:36)&#13;
+&#13;
+</error>
+      </testcase>
+      <testcase name="User creates an account without filling any details" classname="Registration functionality" time="0.034">
+        <error>java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.click()" because "webElement" is null&#13;
+	at utils.ElementUtils.clickOnElement(ElementUtils.java:24)&#13;
+	at pages.HomePage.clickOnMyAccount(HomePage.java:42)&#13;
+	at stepDefinitions.Register.user_navigates_to_register_account_page(Register.java:29)&#13;
+	at ✽.User navigates to Register Account page(file:///C:/Users/Shuvo/Desktop/OpenCartCucumberJunitPOM/OpenCart/src/test/resources/features/Register.feature:42)&#13;
+&#13;
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "this.driver" is null&#13;
+	at hooks.ProjectHooks.tearDown(ProjectHooks.java:36)&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

@@ -1,0 +1,37 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class CheckoutPage {
+    private WebDriver driver;
+
+    // Locators
+    private By firstNameField = By.name("firstname");
+    private By lastNameField = By.name("lastname");
+    private By addressField = By.name("address_1");
+    private By cityField = By.name("city");
+    private By continueButton = By.id("button-payment-method");
+    private By confirmOrderButton = By.id("button-confirm");
+
+    // Constructor
+    public CheckoutPage(WebDriver driver) {
+        this.driver = driver;
+    }
+
+    // Methods
+    public void fillBillingDetails(String firstName, String lastName, String address, String city) {
+        driver.findElement(firstNameField).sendKeys(firstName);
+        driver.findElement(lastNameField).sendKeys(lastName);
+        driver.findElement(addressField).sendKeys(address);
+        driver.findElement(cityField).sendKeys(city);
+    }
+
+    public void continueToPayment() {
+        driver.findElement(continueButton).click();
+    }
+
+    public void confirmOrder() {
+        driver.findElement(confirmOrderButton).click();
+    }
+}

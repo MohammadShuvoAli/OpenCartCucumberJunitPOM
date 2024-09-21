@@ -1,0 +1,40 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class CartPage {
+    private WebDriver driver;
+
+    // Locators
+    private By cartItems = By.cssSelector(".cart-items");
+    private By checkoutButton = By.cssSelector(".btn-checkout");
+    private By productQuantity = By.name("quantity");
+    private By updateCartButton = By.name("update_cart");
+    private By removeProduct = By.cssSelector(".remove-product");
+
+    // Constructor
+    public CartPage(WebDriver driver) {
+        this.driver = driver;
+    }
+
+    // Methods
+    public int getNumberOfItemsInCart() {
+        return driver.findElements(cartItems).size();
+    }
+
+    public void updateProductQuantity(String quantity) {
+        driver.findElement(productQuantity).clear();
+        driver.findElement(productQuantity).sendKeys(quantity);
+        driver.findElement(updateCartButton).click();
+    }
+
+    public void removeItemFromCart() {
+        driver.findElement(removeProduct).click();
+    }
+
+    public CheckoutPage proceedToCheckout() {
+        driver.findElement(checkoutButton).click();
+        return new CheckoutPage(driver);  // Returns a new CheckoutPage object
+    }
+}
